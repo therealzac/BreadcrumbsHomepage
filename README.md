@@ -20,17 +20,17 @@ Made with HTML / Sass Jumpstart
 
 ## Development Scripts
 
-**`npm start`**
+**`yarn start`**
 
 > Serve with hot reload at localhost:1337
 
-**`npm run build`**
+**`yarn run build`**
 
 > Generate minified, autoprefixed CSS for production
 
 Use this as the "Publish command" if needed by hosting such as Netlify.
 
-**`npm run serve`**
+**`yarn run serve`**
 
 > Serve latest build files at localhost:1337
 
@@ -40,10 +40,10 @@ Linting is provided by [Stylelint](https://stylelint.io/) and rules are extended
 
 ### Lint Script
 
-**`npm run lint`**
+**`yarn run lint`**
 
 > Run stylelint and review errors in terminal
 
-**`npm run lint:fix`**
+**`yarn run lint:fix`**
 
 > Run stylelint with the fix flag to attempt to resolve found errors
