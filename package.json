@@ -1,9 +1,9 @@
 {
-  "name": "tdbc-html-sass-jumpstart",
-  "description": "node-sass jumpstart with stylelint",
+  "name": "Breadcrumbs",
+  "description": "Own your data",
   "version": "0.4.0",
   "main": "public/index.html",
-  "author": "5t3ph",
+  "author": "Zac Wickstrom",
   "scripts": {
     "scss": "sass src/sass:public/css",
     "css": "postcss public/css/*.css -u autoprefixer cssnano -r -m",
