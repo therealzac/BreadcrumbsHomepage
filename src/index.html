@@ -4,34 +4,55 @@
     <!-- Generated from the HTML / Sass Jumpstart: https://github.com/5t3ph/html-sass-jumpstart -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>HTML / Sass Jumpstart</title>
+    <title>Breadcrumbs</title>
     <meta name="description" content="Breadcrumbs. Take control of your data." />
-    <link rel="icon" type="image/png" href="https://scribr-uploads.s3.us-east-2.amazonaws.com/Asset+1%401x.png">
+    <link rel="icon" type="image/png" href="https://scribr-uploads.s3.us-east-2.amazonaws.com/logo122222.png">
     <link
       href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <script src="https://kit.fontawesome.com/4ab9fc8975.js" crossorigin="anonymous"></script>
     <link href="css/style.css" rel="stylesheet" />
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementsByClassName("hamburger-menu")[0]
+        if (menu.classList.contains('hidden')) {
+          menu.classList.remove('hidden');
+        } else {
+          menu.classList.add('hidden');
+        }
+      }
+    </script>
   </head>
 
   <body>
     <div class="homepage">
       <div class="topnav">
         <img src="https://scribr-uploads.s3.us-east-2.amazonaws.com/logo122222.png" />
-        <p class="title">Breadcrumbs</p>
+        <a href="/" class="title">Breadcrumbs</a>
+        <i class="fa-solid fa-bars hamburger" onClick="toggleMenu(); return false;"></i>
         <div class="nav-options">
-          <p>ABOUT US</p>
-          <p>FAQ</p>
-          <p>FOLLOW US</p>
-          <p>BLOG</p>
-          <p>CAREERS</p>
+          <a href="/about.html">ABOUT US</a>
+          <a href="/faq.html">FAQ</a>
+          <a href="https://www.facebook.com/people/Breadcrumbs/100084538641195/">FOLLOW US</a>
+          <a href="/blog.html">BLOG</a>
+          <a href="/careers.html">CAREERS</a>
+        </div>
+        <div class='hamburger-menu hidden'>
+          <div class="nav-options">
+            <a href="/about.html">ABOUT US</a>
+            <a href="/faq.html">FAQ</a>
+            <a href="https://www.facebook.com/people/Breadcrumbs/100084538641195/">FOLLOW US</a>
+            <a href="/blog.html">BLOG</a>
+            <a href="/careers.html">CAREERS</a>
+          </div>
         </div>
       </div>
 
       <div class="first-section">
-        <p class="title">It's not just about protecting your data - it's about owning it.</p>
+        <p class="title">It's not just about protecting your data. It's about owning it.</p>
         <p class="subtitle">Your data security goes beyond what you do on the internet. Take ownership of your digital footprint across all apps and services.</p>
-        <button>Get Breadcrumbs</button>
+        <button>GET BREADCRUMBS</button>
         <div class='image-container'>
           <img class='left' src="https://scribr-uploads.s3.us-east-2.amazonaws.com/leftIntroCharacter.svg" />
           <img class='right' src="https://scribr-uploads.s3.us-east-2.amazonaws.com/rightIntroCharacter.svg" />
@@ -42,7 +63,7 @@
         <div class="dashboard-info">
           <div class='block'>
             <p class="title">Your Personal Data Dashboard.</p>
-            <p class="subtitle">For the first time, Breadcrumbs allows you to visualize and control your own personal data with our patent-pending data dashboard.</p>
+            <p class="subtitle">Uniquely developed for users, Breadcrumbs is the only app that allows you to visualize and control your own personal data with our patent-pending data dashboard.</p>
             <button>EXPLORE MORE</button>
           </div>
           <div class='block'>
@@ -50,28 +71,31 @@
           </div>
         </div>
         <div class="vpn-info">
-          <div class='block'>
+          <div class='block desktop'>
             <img src="https://scribr-uploads.s3.us-east-2.amazonaws.com/bottomMiddleCharacter.svg" />
           </div>
           <div class='block'>
             <p class="title">Best-in-class VPN service.</p>
             <p class="subtitle">Connect reliably from anywhere, to anywhere. Our decentralized, peer-to-peer network of high-speed nodes across the world puts you in control - with no possibility of logs, period.</p>
           </div>
+          <div class='block mobile'>
+            <img src="https://scribr-uploads.s3.us-east-2.amazonaws.com/bottomMiddleCharacter.svg" />
+          </div>
         </div>
       </div>
 
       <div class="third-section">
-        <div class='block text-left'>
+        <div class='block text-left know-yourself'>
           <p class='title'>Know yourself better than Google does.</p>
           <p class='subtitle'>Receive real-time analytics about your own personal behavior to find trends in what you do.</p>
           <button>Explore More</button>
         </div>
         <div class="block">
-          <img src="https://scribr-uploads.s3.us-east-2.amazonaws.com/mailRocket.svg" />
+          <img class="rocket" src="https://scribr-uploads.s3.us-east-2.amazonaws.com/mailRocket.svg" />
         </div>
         <img class="divider-squiggle" src="https://scribr-uploads.s3.us-east-2.amazonaws.com/dividerSquiggle.svg" />
         <div class="block thirds">
-          <img src="https://scribr-uploads.s3.us-east-2.amazonaws.com/noSpam.svg" />
+          <img class="spam" src="https://scribr-uploads.s3.us-east-2.amazonaws.com/noSpam.svg" />
           <p class='title'>Get rid of spam - for good.</p>
           <p class='subtitle'>Our smart email assistant allows you to automatically unsubscribe from mailing lists you don’t use.</p>
         </div>
@@ -82,7 +106,7 @@
         </div>
         <div class="block thirds">
           <img src="https://scribr-uploads.s3.us-east-2.amazonaws.com/keepDataSafe.svg" />
-          <p class='title'>Keep your data safe.</p>
+          <p class='title safe-data'>Keep your data safe.</p>
           <p class='subtitle'>Be the first to know when data leakages affect your accounts across the internet.</p>
         </div>
       </div>
@@ -93,20 +117,19 @@
       </div>
 
       <div class="fifth-section">
-        <img src="https://scribr-uploads.s3.us-east-2.amazonaws.com/logo122222.png" />
         <p class='title'>Get Early Access.</p>
         <p class='subtitle'>We're rolling out our service on a first-come, first-serve basis. Reserve your spot now to join the personal data revolution.</p>
         <button>Sign Up</button>
       </div>
 
       <div class="footer">
-        <p class="copyright">© 2022</p>
+        <p class="copyright">© Breadcrumbs</p>
         <div class="nav-options">
-          <p>ABOUT US</p>
-          <p>FAQ</p>
-          <p>FOLLOW US</p>
-          <p>BLOG</p>
-          <p>CAREERS</p>
+          <a href="/about.html">ABOUT US</a>
+          <a href="/faq.html">FAQ</a>
+          <a href="https://www.facebook.com/people/Breadcrumbs/100084538641195/">FOLLOW US</a>
+          <a href="/blog.html">BLOG</a>
+          <a href="/careers.html">CAREERS</a>
         </div>
       </div>
     </div>

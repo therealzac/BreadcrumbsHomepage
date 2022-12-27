@@ -15,28 +15,76 @@
       vertical-align: text-bottom;
       display: inline-block;
       font-weight: bold;
+      color: black;
+      cursor: pointer;
+      text-decoration: none;
+      height: 2.5em;
+    }
+    .hamburger {
+      display: none;
     }
     .nav-options {
       float: right;
       padding-top: 1em;
-      p {
+      a {
+        color: black;
         font-size: 14px;
         font-weight: 500;
         display: inline-block;
         vertical-align: text-bottom;
         cursor: pointer;
         margin-left: 1em;
+        text-decoration: none;
       }
     }
     img {
       display: inline-block;
       height: 3em;
     }
+    .hamburger-menu {
+      &.hidden {
+        display: none;
+      }
+      position: absolute;
+      right: 1em;
+      width: 8em;
+      height: 13em;
+      background: white;
+      border: 1px solid #aeaeae;
+      border-radius: 1em;
+      .nav-options {
+        a {
+          display: block;
+          padding: 0.5em;
+          padding-right: 1em;
+          text-align: left;
+        }
+      }
+    }
+    @media screen and (max-width: 756px) {
+      padding: 1em;
+      .nav-options {
+        display: none;
+      }
+      .hamburger-menu {
+        .nav-options {
+          display: block;
+        }
+      }
+      .hamburger {
+        display: inline-block;
+        float: right;
+        padding-top: 0.5em;
+        padding-right: 0.5em;
+        font-size: 24px;
+        cursor: pointer;
+      }
+    }
   }
 
   .first-section {
     display: block;
-    height: max-content;
+    height: 100vh;
     padding-bottom: 3em;
     text-align: center;
     .title {
@@ -45,7 +93,7 @@
       font-size: 32px;
       width: 60%;
       margin-left: 20%;
-      margin-top: 1em;
+      margin-top: 5em;
     }
     .subtitle {
       text-align: center;
@@ -58,7 +106,7 @@
       cursor: pointer;
       border-radius: 0.25em;
       margin-top: 3em;
-      width: 13em;
+      width: 18em;
       padding: 1em;
       background-color: #23A9E1;
       border: none;
@@ -68,15 +116,52 @@
       padding: 0;
     }
     img {
+      position: absolute;
       display: inline-block;
       width: 40%;
       &.left {
-        margin-left: 3em;
+        left: 5em;
+        top: 62vh;
         height: 34em;
       }
       &.right {
-        margin-left: 10%;
+        right: 5em;
+        top: 62vh;
         height: 34em;
+      }
+    }
+
+    @media screen and (max-width: 756px) {
+      height: max-content;
+      .title {
+        text-align: left;
+        margin-top: 3em;
+        line-height: 40px;
+        margin-left: 10%;
+        width: 80%;
+        margin-top: 1em;
+        font-size: 30px;
+      }
+      .subtitle {
+        text-align: left;
+        margin-left: 10%;
+        width: 80%;
+      }
+      button {
+        margin-top: 2em;
+        width: 13em;
+      }
+      img {
+        &.left {
+          display: none;
+        }
+        &.right {
+          position: relative;
+          width: 60%;
+          top: 0;
+          right: 0;
+          height: max-content;
+        }
       }
     }
   }
@@ -119,6 +204,57 @@
     }
     .vpn-info {
       margin-top: 3em;
+      .mobile {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 756px) {
+      padding: 2em;
+      .block {
+        width: 100%;
+        text-align: left;
+        height: max-content;
+      }
+      .dashboard-info {
+        margin-bottom: -2em !important;
+        .title {
+          font-size: 28px;
+          margin-top: 1em;
+          text-align: left;
+        }
+        .subtitle {
+          text-align: left;
+        }
+        img {
+          width: 70%;
+          margin-left: 15%;
+          margin-top: 5em;
+        }
+        button {
+          margin-left: 10%;
+          width: 8em;
+        }
+      }
+      .vpn-info {
+        padding-bottom: 5em;
+        .title {
+          margin-top: 1em;
+          text-align: left;
+        }
+        .subtitle {
+          text-align: left;
+        }
+        .desktop {
+          display: none;
+        }
+        .mobile {
+          display: block;
+        }
+        img {
+          width: 70%;
+          margin-left: 15%;
+        }
+      }
     }
   }
 
@@ -138,6 +274,7 @@
       &.thirds {
         width: 32%;
         vertical-align: bottom;
+        height: max-content;
         .title {
           margin-top: 3em;
           font-size: 24px;
@@ -147,6 +284,9 @@
           width: 60%;
           margin-left: 20%;
           height: 13em;
+        }
+        p {
+          height: 8em;
         }
       }
     }
@@ -175,6 +315,53 @@
       width: 13em;
       padding: 1em;
     }
+    @media screen and (max-width: 756px) {
+      padding: 2em;
+      .block {
+        width: 100% !important;
+        height: max-content;
+      }
+      button {
+        width: 8em;
+      }
+      img:not(.divider-squiggle):not(.rocket) {
+        width: 60% !important;
+        margin-left: 20% !important;
+      }
+      .know-yourself {
+        .title {
+          margin-top: 1em;
+        }
+      }
+      .rocket {
+        width: 80% !important;
+        margin-left: 10% !important;
+        margin-top: -5%;
+      }
+      .divider-squiggle {
+        margin-top: 3em;
+      }
+      .thirds {
+        .title {
+          margin-top: 1em !important;
+          margin-bottom: 1em;
+          height: max-content !important;
+          font-size: 20px !important;
+        }
+        .subtitle {
+          margin-bottom: 2em;
+        }
+        img {
+          margin-top: 1em;
+        }
+        .spam {
+          margin-top: 5em;
+        }
+        .safe-data {
+          height: 3em !important;
+        }
+      }
+    }
   }
 
   .fourth-section {
@@ -194,6 +381,19 @@
       width: 90%;
       margin-left: 5%;
     }
+    @media screen and (max-width: 756px) {
+      padding: 2em;
+      .title {
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+        margin-left: 0;
+      }
+      img {
+        width: 100%;
+        margin-left: 0;
+      }
+    }
   }
 
   .fifth-section {
@@ -205,7 +405,7 @@
       font-size: 32px;
       width: 80%;
       margin-left: 10%;
-      margin-top: 1em;
+      margin-top: 0;
     }
     .subtitle {
       width: 60%;
@@ -218,6 +418,7 @@
       cursor: pointer;
       border-radius: 0.25em;
       margin-top: 1em;
+      margin-bottom: 3em;
       width: 13em;
       padding: 1em
     }
@@ -225,24 +426,942 @@
       width: 20%;
       margin-left: 40%;
     }
+    @media screen and (max-width: 756px) {
+      padding: 2em 1em 2em 1em;
+      .subtitle {
+        width: 80%;
+        margin-left: 10%;
+        text-align: left;
+      }
+    }
   }
 
   .footer {
     background-color: #23A9E1;
-    color: #eee;
-    font-size: 8px;
+    color: #ddd;
+    font-size: 14px !important;
     padding: 2em;
-    padding-top: 3em;
+    height: 5.5em;
     .copyright {
       display: inline-block;
     }
     .nav-options {
       display: inline-block;
       float: right;
-      p {
+      a {
         display: inline-block;
         cursor: pointer;
         margin-left: 1em;
+        color: #ddd;
+        text-decoration: none;
+      }
+    }
+    @media screen and (max-width: 756px) {
+      .nav-options {
+        display: none;
+      }
+      .copyright {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+.about {
+  font-family: montserrat;
+  .topnav {
+    padding: 1em 5em 1em 5em;
+    .title {
+      vertical-align: text-bottom;
+      display: inline-block;
+      font-weight: bold;
+      color: black;
+      cursor: pointer;
+      text-decoration: none;
+      height: 2.5em;
+    }
+    .hamburger {
+      display: none;
+    }
+    .nav-options {
+      float: right;
+      padding-top: 1em;
+      a {
+        color: black;
+        font-size: 14px;
+        font-weight: 500;
+        display: inline-block;
+        vertical-align: text-bottom;
+        cursor: pointer;
+        margin-left: 1em;
+        text-decoration: none;
+      }
+    }
+    img {
+      display: inline-block;
+      height: 3em;
+    }
+    .hamburger-menu {
+      &.hidden {
+        display: none;
+      }
+      position: absolute;
+      right: 1em;
+      width: 8em;
+      height: 13em;
+      background: white;
+      border: 1px solid #aeaeae;
+      border-radius: 1em;
+      .nav-options {
+        a {
+          display: block;
+          padding: 0.5em;
+          padding-right: 1em;
+          text-align: left;
+        }
+      }
+    }
+    @media screen and (max-width: 756px) {
+      padding: 1em;
+      .nav-options {
+        display: none;
+      }
+      .hamburger-menu {
+        .nav-options {
+          display: block;
+        }
+      }
+      .hamburger {
+        display: inline-block;
+        float: right;
+        padding-top: 0.5em;
+        padding-right: 0.5em;
+        font-size: 24px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .first-section {
+    display: block;
+    padding: 3em;
+    .block {
+      display: inline-block;
+      width: 49%;
+      text-align: left;
+      height: max-content;
+      vertical-align: middle;
+    }
+    .title {
+      width: 80%;
+      margin-left: 10%;
+      font-size: 32px;
+      font-weight: bold;
+    }
+    .subtitle {
+      width: 80%;
+      margin-left: 10%;
+    }
+    img {
+      width: 80%;
+      margin-left: 10%;
+    }
+    button {
+      background-color: white;
+      color: #36ACE2;
+      border: none;
+      cursor: pointer;
+      border-radius: 0.25em;
+      margin-top: 1em;
+      width: 13em;
+      padding: 1em;
+    }
+    .our-plan {
+      margin-top: 3em;
+      .mobile {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 756px) {
+      padding: 2em;
+      .block {
+        width: 100%;
+        text-align: left;
+        height: max-content;
+      }
+      .dashboard-info {
+        margin-bottom: -2em !important;
+        .title {
+          font-size: 28px;
+          margin-top: 1em;
+          text-align: left;
+        }
+        .subtitle {
+          text-align: left;
+        }
+        img {
+          width: 70%;
+          margin-left: 15%;
+          margin-top: 5em;
+        }
+        button {
+          margin-left: 10%;
+          width: 8em;
+        }
+      }
+      .our-plan {
+        padding-bottom: 5em;
+        .title {
+          margin-top: 1em;
+          text-align: left;
+        }
+        .subtitle {
+          text-align: left;
+        }
+        .desktop {
+          display: none;
+        }
+        .mobile {
+          display: block;
+        }
+        img {
+          width: 70%;
+          margin-left: 15%;
+        }
+      }
+    }
+  }
+
+  .footer {
+    background-color: #23A9E1;
+    color: #ddd;
+    font-size: 14px !important;
+    padding: 2em;
+    height: 5.5em;
+    .copyright {
+      display: inline-block;
+    }
+    .nav-options {
+      display: inline-block;
+      float: right;
+      a {
+        display: inline-block;
+        cursor: pointer;
+        margin-left: 1em;
+        color: #ddd;
+        text-decoration: none;
+      }
+    }
+    @media screen and (max-width: 756px) {
+      .nav-options {
+        display: none;
+      }
+      .copyright {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+.faq {
+  font-family: montserrat;
+  .topnav {
+    padding: 1em 5em 1em 5em;
+    .title {
+      vertical-align: text-bottom;
+      display: inline-block;
+      font-weight: bold;
+      color: black;
+      cursor: pointer;
+      text-decoration: none;
+      height: 2.5em;
+    }
+    .hamburger {
+      display: none;
+    }
+    .nav-options {
+      float: right;
+      padding-top: 1em;
+      a {
+        color: black;
+        font-size: 14px;
+        font-weight: 500;
+        display: inline-block;
+        vertical-align: text-bottom;
+        cursor: pointer;
+        margin-left: 1em;
+        text-decoration: none;
+      }
+    }
+    img {
+      display: inline-block;
+      height: 3em;
+    }
+    .hamburger-menu {
+      &.hidden {
+        display: none;
+      }
+      position: absolute;
+      right: 1em;
+      width: 8em;
+      height: 13em;
+      background: white;
+      border: 1px solid #aeaeae;
+      border-radius: 1em;
+      .nav-options {
+        a {
+          display: block;
+          padding: 0.5em;
+          padding-right: 1em;
+          text-align: left;
+        }
+      }
+    }
+    @media screen and (max-width: 756px) {
+      padding: 1em;
+      .nav-options {
+        display: none;
+      }
+      .hamburger-menu {
+        .nav-options {
+          display: block;
+        }
+      }
+      .hamburger {
+        display: inline-block;
+        float: right;
+        padding-top: 0.5em;
+        padding-right: 0.5em;
+        font-size: 24px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .first-section {
+    display: block;
+    padding: 3em;
+    .block {
+      display: inline-block;
+      width: 49%;
+      text-align: right;
+      height: max-content;
+      vertical-align: middle;
+    }
+    .title {
+      width: 80%;
+      margin-left: 10%;
+      font-size: 32px;
+      font-weight: bold;
+    }
+    .subtitle {
+      width: 80%;
+      margin-left: 10%;
+      &.bold {
+        font-weight: bold;
+      }
+    }
+    img {
+      width: 80%;
+      margin-left: 10%;
+    }
+    button {
+      background-color: white;
+      color: #36ACE2;
+      border: none;
+      cursor: pointer;
+      border-radius: 0.25em;
+      margin-top: 1em;
+      width: 13em;
+      padding: 1em;
+    }
+    .faq-list {
+      margin-top: 3em;
+      .block {
+        text-align: left;
+      }
+    }
+    .li-container {
+      margin-left: 20%;
+    }
+    @media screen and (max-width: 756px) {
+      padding: 2em;
+      .block {
+        width: 100%;
+        text-align: left;
+        height: max-content;
+      }
+      .dashboard-info {
+        margin-bottom: -2em !important;
+        .title {
+          font-size: 28px;
+          margin-top: 1em;
+          text-align: left;
+        }
+        .subtitle {
+          text-align: left;
+        }
+        img {
+          width: 70%;
+          margin-left: 15%;
+          margin-top: 5em;
+        }
+        button {
+          margin-left: 10%;
+          width: 8em;
+        }
+      }
+      .faq-list {
+        padding-bottom: 5em;
+        .title {
+          margin-top: 1em;
+          text-align: left;
+        }
+        .subtitle {
+          text-align: left;
+        }
+        img {
+          width: 70%;
+          margin-left: 15%;
+        }
+      }
+    }
+  }
+
+  .footer {
+    background-color: #23A9E1;
+    color: #ddd;
+    font-size: 14px !important;
+    padding: 2em;
+    height: 5.5em;
+    .copyright {
+      display: inline-block;
+    }
+    .nav-options {
+      display: inline-block;
+      float: right;
+      a {
+        display: inline-block;
+        cursor: pointer;
+        margin-left: 1em;
+        color: #ddd;
+        text-decoration: none;
+      }
+    }
+    @media screen and (max-width: 756px) {
+      .nav-options {
+        display: none;
+      }
+      .copyright {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+.careers {
+  font-family: montserrat;
+  .topnav {
+    padding: 1em 5em 1em 5em;
+    .title {
+      vertical-align: text-bottom;
+      display: inline-block;
+      font-weight: bold;
+      color: black;
+      cursor: pointer;
+      text-decoration: none;
+      height: 2.5em;
+    }
+    .hamburger {
+      display: none;
+    }
+    .nav-options {
+      float: right;
+      padding-top: 1em;
+      a {
+        color: black;
+        font-size: 14px;
+        font-weight: 500;
+        display: inline-block;
+        vertical-align: text-bottom;
+        cursor: pointer;
+        margin-left: 1em;
+        text-decoration: none;
+      }
+    }
+    img {
+      display: inline-block;
+      height: 3em;
+    }
+    .hamburger-menu {
+      &.hidden {
+        display: none;
+      }
+      position: absolute;
+      right: 1em;
+      width: 8em;
+      height: 13em;
+      background: white;
+      border: 1px solid #aeaeae;
+      border-radius: 1em;
+      .nav-options {
+        a {
+          display: block;
+          padding: 0.5em;
+          padding-right: 1em;
+          text-align: left;
+        }
+      }
+    }
+    @media screen and (max-width: 756px) {
+      padding: 1em;
+      .nav-options {
+        display: none;
+      }
+      .hamburger-menu {
+        .nav-options {
+          display: block;
+        }
+      }
+      .hamburger {
+        display: inline-block;
+        float: right;
+        padding-top: 0.5em;
+        padding-right: 0.5em;
+        font-size: 24px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .block {
+    display: inline-block;
+    width: 49%;
+    text-align: left;
+    height: max-content;
+    vertical-align: middle;
+    .title {
+      width: 100%;
+      font-size: 32px;
+      font-weight: bold;
+    }
+    .subtitle {
+      &.bold {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .first-section {
+    background-color: #36ACE2;
+    padding: 3em;
+    p {
+      color: white;
+    }
+    .block {
+      display: inline-block;
+      width: 49%;
+      text-align: center;
+      height: max-content;
+      vertical-align: middle;
+    }
+    .title {
+      width: 100%;
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+    }
+    .subtitle {
+      width: 80%;
+      margin-left: 10%;
+    }
+    img {
+      width: 80%;
+      margin-left: 10%;
+    }
+    button {
+      background-color: white;
+      color: #36ACE2;
+      border: none;
+      cursor: pointer;
+      border-radius: 0.25em;
+      margin-top: 1em;
+      width: 13em;
+      padding: 1em;
+    }
+    .our-plan {
+      margin-top: 3em;
+      .mobile {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 756px) {
+      padding: 2em;
+      .block {
+        width: 100%;
+        text-align: left;
+        height: max-content;
+      }
+      .dashboard-info {
+        margin-bottom: -2em !important;
+        .title {
+          font-size: 28px;
+          margin-top: 1em;
+          text-align: left;
+        }
+        .subtitle {
+          text-align: left;
+        }
+        img {
+          width: 70%;
+          margin-left: 15%;
+          margin-top: 5em;
+        }
+        button {
+          margin-left: 10%;
+          width: 8em;
+        }
+      }
+      .our-plan {
+        padding-bottom: 5em;
+        .title {
+          margin-top: 1em;
+          text-align: left;
+        }
+        .subtitle {
+          text-align: left;
+        }
+        .desktop {
+          display: none;
+        }
+        .mobile {
+          display: block;
+        }
+        img {
+          width: 70%;
+          margin-left: 15%;
+        }
+      }
+    }
+  }
+
+  .second-section {
+    padding: 3em;
+    button {
+      cursor: pointer;
+      border-radius: 0.25em;
+      margin-top: 1em;
+      width: 8em;
+      padding: 1em;
+      background-color: #23A9E1;
+      border: none;
+      color: white;
+    }
+    @media screen and (max-width: 756px) {
+      padding: 2em;
+      .block {
+        width: 100%;
+        text-align: left;
+        height: max-content;
+      }
+      .dashboard-info {
+        margin-bottom: -2em !important;
+        .title {
+          font-size: 28px;
+          margin-top: 1em;
+          text-align: left;
+        }
+        .subtitle {
+          text-align: left;
+        }
+        img {
+          width: 70%;
+          margin-left: 15%;
+          margin-top: 5em;
+        }
+        button {
+          margin-left: 10%;
+          width: 8em;
+        }
+      }
+      .our-plan {
+        padding-bottom: 5em;
+        .title {
+          margin-top: 1em;
+          text-align: left;
+        }
+        .subtitle {
+          text-align: left;
+        }
+        .desktop {
+          display: none;
+        }
+        .mobile {
+          display: block;
+        }
+        img {
+          width: 70%;
+          margin-left: 15%;
+        }
+      }
+    }
+  }
+
+  .footer {
+    background-color: #23A9E1;
+    color: #ddd;
+    font-size: 14px !important;
+    padding: 2em;
+    height: 5.5em;
+    .copyright {
+      display: inline-block;
+    }
+    .nav-options {
+      display: inline-block;
+      float: right;
+      a {
+        display: inline-block;
+        cursor: pointer;
+        margin-left: 1em;
+        color: #ddd;
+        text-decoration: none;
+      }
+    }
+    @media screen and (max-width: 756px) {
+      .nav-options {
+        display: none;
+      }
+      .copyright {
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+.blog {
+  font-family: montserrat;
+  .topnav {
+    padding: 1em 5em 1em 5em;
+    .title {
+      vertical-align: text-bottom;
+      display: inline-block;
+      font-weight: bold;
+      color: black;
+      cursor: pointer;
+      text-decoration: none;
+      height: 2.5em;
+    }
+    .hamburger {
+      display: none;
+    }
+    .nav-options {
+      float: right;
+      padding-top: 1em;
+      a {
+        color: black;
+        font-size: 14px;
+        font-weight: 500;
+        display: inline-block;
+        vertical-align: text-bottom;
+        cursor: pointer;
+        margin-left: 1em;
+        text-decoration: none;
+      }
+    }
+    img {
+      display: inline-block;
+      height: 3em;
+    }
+    .hamburger-menu {
+      &.hidden {
+        display: none;
+      }
+      position: absolute;
+      right: 1em;
+      width: 8em;
+      height: 13em;
+      background: white;
+      border: 1px solid #aeaeae;
+      border-radius: 1em;
+      .nav-options {
+        a {
+          display: block;
+          padding: 0.5em;
+          padding-right: 1em;
+          text-align: left;
+        }
+      }
+    }
+    @media screen and (max-width: 756px) {
+      padding: 1em;
+      .nav-options {
+        display: none;
+      }
+      .hamburger-menu {
+        .nav-options {
+          display: block;
+        }
+      }
+      .hamburger {
+        display: inline-block;
+        float: right;
+        padding-top: 0.5em;
+        padding-right: 0.5em;
+        font-size: 24px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .first-section {
+    background-color: #36ACE2;
+    padding: 3em;
+    height: 100vh;
+    p {
+      color: white;
+    }
+    .block {
+      display: inline-block;
+      width: 49%;
+      text-align: center;
+      height: max-content;
+      vertical-align: middle;
+    }
+    .title {
+      width: 100%;
+      font-size: 32px;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 33vh;
+    }
+    .subtitle {
+      width: 80%;
+      margin-left: 10%;
+    }
+    img {
+      width: 80%;
+      margin-left: 10%;
+    }
+    button {
+      background-color: white;
+      color: #36ACE2;
+      border: none;
+      cursor: pointer;
+      border-radius: 0.25em;
+      margin-top: 1em;
+      width: 13em;
+      padding: 1em;
+    }
+    .our-plan {
+      margin-top: 3em;
+      .mobile {
+        display: none;
+      }
+    }
+    @media screen and (max-width: 756px) {
+      padding: 2em;
+      .block {
+        width: 100%;
+        text-align: left;
+        height: max-content;
+      }
+      .dashboard-info {
+        margin-bottom: -2em !important;
+        .title {
+          font-size: 28px;
+          margin-top: 1em;
+          text-align: left;
+        }
+        .subtitle {
+          text-align: left;
+        }
+        img {
+          width: 70%;
+          margin-left: 15%;
+          margin-top: 5em;
+        }
+        button {
+          margin-left: 10%;
+          width: 8em;
+        }
+      }
+      .our-plan {
+        padding-bottom: 5em;
+        .title {
+          margin-top: 1em;
+          text-align: left;
+        }
+        .subtitle {
+          text-align: left;
+        }
+        .desktop {
+          display: none;
+        }
+        .mobile {
+          display: block;
+        }
+        img {
+          width: 70%;
+          margin-left: 15%;
+        }
+      }
+    }
+  }
+
+  .footer {
+    background-color: #23A9E1;
+    color: #ddd;
+    font-size: 14px !important;
+    padding: 2em;
+    height: 5.5em;
+    .copyright {
+      display: inline-block;
+    }
+    .nav-options {
+      display: inline-block;
+      float: right;
+      a {
+        display: inline-block;
+        cursor: pointer;
+        margin-left: 1em;
+        color: #ddd;
+        text-decoration: none;
+      }
+    }
+    @media screen and (max-width: 756px) {
+      .nav-options {
+        display: none;
+      }
+      .copyright {
+        width: 100%;
       }
     }
   }
