@@ -1406,6 +1406,14 @@
   }
   .deletion-instructions-text {
     text-align: center;
+    font-size: 20px;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5em !important;
+    margin-bottom: 1em;
+    &:last-child {
+      margin-bottom: 5em;
+    }
   }
   .topnav {
     padding: 1em 5em 1em 5em;
