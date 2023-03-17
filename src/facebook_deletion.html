@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Generated from the HTML / Sass Jumpstart: https://github.com/5t3ph/html-sass-jumpstart -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Breadcrumbs</title>
+    <meta name="description" content="Breadcrumbs. Take control of your data." />
+    <link rel="icon" type="image/png" href="https://scribr-uploads.s3.us-east-2.amazonaws.com/logo122222.png">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://kit.fontawesome.com/4ab9fc8975.js" crossorigin="anonymous"></script>
+    <link href="css/style.css" rel="stylesheet" />
+    <script>
+      function toggleMenu() {
+        const menu = document.getElementsByClassName("hamburger-menu")[0]
+        if (menu.classList.contains('hidden')) {
+          menu.classList.remove('hidden');
+        } else {
+          menu.classList.add('hidden');
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <div class="deletion-instructions">
+      <div class="topnav">
+        <img src="https://scribr-uploads.s3.us-east-2.amazonaws.com/logo122222.png" />
+        <a href="/" class="title">Breadcrumbs</a>
+        <i class="fa-solid fa-bars hamburger" onClick="toggleMenu(); return false;"></i>
+        <div class="nav-options">
+          <a href="/about.html">ABOUT US</a>
+          <a href="/faq.html">FAQ</a>
+          <a href="https://www.linkedin.com/company/breadcrumbsvpn/">FOLLOW US</a>
+          <a href="/blog.html">BLOG</a>
+          <a href="/careers.html">CAREERS</a>
+          <a href="/privacy.html">PRIVACY POLICY</a>
+        </div>
+        <div class='hamburger-menu hidden'>
+          <div class="nav-options">
+            <a href="/about.html">ABOUT US</a>
+            <a href="/faq.html">FAQ</a>
+            <a href="https://www.linkedin.com/company/breadcrumbsvpn/">FOLLOW US</a>
+            <a href="/blog.html">BLOG</a>
+            <a href="/careers.html">CAREERS</a>
+            <a href="/privacy.html">PRIVACY POLICY</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <p class="page-title">Deleting Your Data</p>
+        <p class='deletion-instructions-text'>To delete your data on Breadcrumbs, first navigate to the "sources" view in the app.</p>
+        <img class='deletion-instruction-image' src="https://scribr-uploads.s3.us-east-2.amazonaws.com/IMG_4347.png" />
+        <p class='deletion-instructions-text'>Select the source you'd like to delete, and select "Disconnect Source".</p>
+        <img class='deletion-instruction-image' src="https://scribr-uploads.s3.us-east-2.amazonaws.com/IMG_4348.png" />
+        <p class='deletion-instructions-text'>You will see a confirmation popup to confirm if you're sure about deleting your data. Select "Yes".</p>
+        <img class='deletion-instruction-image' src="https://scribr-uploads.s3.us-east-2.amazonaws.com/IMG_4349.png" />
+        <p class='deletion-instructions-text'>Aaaand it's gone!</p>
+      </div>
+
+      <div class="footer">
+        <p class="copyright">© Breadcrumbs</p>
+        <div class="nav-options">
+          <a href="/about.html">ABOUT US</a>
+          <a href="/faq.html">FAQ</a>
+          <a href="https://www.linkedin.com/company/breadcrumbsvpn/">FOLLOW US</a>
+          <a href="/blog.html">BLOG</a>
+          <a href="/careers.html">CAREERS</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

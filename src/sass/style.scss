@@ -1398,8 +1398,15 @@
 
 
 
-.privacy-policy, .tos {
+.privacy-policy, .tos, .deletion-instructions {
   font-family: montserrat;
+  .deletion-instruction-image {
+    width: 33% !important;
+    margin-left: 33% !important;
+  }
+  .deletion-instructions-text {
+    text-align: center;
+  }
   .topnav {
     padding: 1em 5em 1em 5em;
     .title {
