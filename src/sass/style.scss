@@ -201,6 +201,7 @@
       text-align: center;
       height: 20em;
     }
+
     .title {
       text-align: center;
       width: 100%;
@@ -447,33 +448,50 @@
 
   .fifth-section {
     text-align: center;
-    padding: 3em;
-    .title {
+    background: linear-gradient(black, #2356e154, #2356e1, white);
+    height:fit-content;
+    .blue {
+      color: #23A9E1;
+    }
+    .block {
+      margin-top: 7em;
+      display: inline-block;
+      width: 50%;
+      float: left;
       text-align: center;
+      height: 15em;
+    }
+    .title {
+      text-align: left;
       font-weight: bold;
-      font-size: 32px;
+      font-size: 60px;
       width: 80%;
-      margin-left: 10%;
+      margin-left: 15%;
       margin-top: 0;
+      color: white;
+      a {
+        font-size: 40px;
+      }
     }
     .subtitle {
       width: 60%;
-      margin-left: 20%;
     }
-    button {
-      background-color: #36ACE2;
+    .description {
+      width: 80%;
+      text-align: left;
+      width: 100%;
       color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 0.25em;
-      margin-top: 1em;
-      margin-bottom: 3em;
-      width: 13em;
-      padding: 1em
+      font-size: 20px;
+      font-weight: bold;
+      margin-left: 15%;
+    }
+    .copyright {
+      display: inline-block;
     }
     img {
-      width: 20%;
-      margin-left: 40%;
+      display: inline-block;
+      width: 100%;
+      margin-top: -31em;
     }
     @media screen and (max-width: 856px) {
       padding: 2em 1em 2em 1em;
@@ -486,25 +504,41 @@
   }
 
   .footer {
-    background-color: #23A9E1;
-    color: #ddd;
-    font-size: 14px !important;
-    padding: 2em;
-    height: 5.5em;
-    .copyright {
-      display: inline-block;
-    }
-    .nav-options {
-      display: inline-block;
-      float: right;
-      a {
+    margin-top: -5;
+      padding: 1em 5em 1em 5em;
+      .title {
+        vertical-align: text-bottom;
         display: inline-block;
+        font-weight: bold;
+        color: black;
         cursor: pointer;
-        margin-left: 1em;
-        color: #ddd;
         text-decoration: none;
+        height: 2.5em;
       }
-    }
+      .hamburger {
+        display: none;
+      }
+      .nav-options {
+        float: right;
+        position: absolute;
+        a {
+          border-radius: 10px;
+          border: white;
+          padding: 1em;
+          color: black;
+          font-size: 14px;
+          font-weight: 600;
+          display: inline-block;
+          vertical-align: text-bottom;
+          cursor: pointer;
+          margin-left: 1em;
+          text-decoration: none;
+        }
+        a:hover {
+          transition: background-color 0.7s;
+          background-color: grey;
+        }
+      }
     @media screen and (max-width: 856px) {
       .nav-options {
         display: none;
