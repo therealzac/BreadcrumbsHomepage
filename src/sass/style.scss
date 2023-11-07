@@ -101,52 +101,60 @@
     padding-bottom: 3em;
     text-align: center;
     .text-block {
+      position: absolute;
       display: inline-block;
       width: 50%;
       text-align: center;
-      height: 20em;
-      padding-right: 10%;
-      margin-left: -10%;
+      top: 0;
+      right: 5em;
+    }
+    .demo {
+      height: 80vh;
+      width: 40vh;
+      border: 1px solid #ccc;
+      border-radius: 1em;
     }
     .title {
       text-align: right;
       font-weight: bold;
-      line-height: 1.3;
+      line-height: 1.1;
       color: white;
       font-size: 65px;
       width: 100%;
       margin-top: 3em;
-    }
-    .blue {
-      color: #23A9E1;
     }
     .subtitle {
       color: white;
       text-align: right;
       font-size: 20px;
       width: 100%;
-      margin-top: 2em;
+    }
+    .blue {
+      color: #23A9E1;
+    }
+    .heavy {
+      font-weight: 800;
     }
     button {
       cursor: pointer;
       float: right;
       border-radius: 0.25em;
-      margin-top: 3em;
+      margin-top: 1em;
       width: 18em;
       padding: 1em;
-      background-color: #23A9E1;
+      background-color: #339aef;
       border: none;
       color: white;
+      display: inline-block;
+      font-weight: bold;
     }
     .img-block {
+      position: absolute;
       display: inline-block;
-      width: 49%;
+      width: 38%;
       text-align: center;
-      height: 20em;
-      float: left;
-    }
-    img {
-      width: 100%;
+      left: 1em;
+      top: 8em;
     }
 
     // @media screen and (max-width: 856px) {
@@ -186,7 +194,6 @@
 
   .second-section {
     display: block;
-    background: linear-gradient(black, #2356e154, #2356e1, black);
     padding: 3em;
     height: 100vh;
     // box-shadow: 0px 0px 30px 30px #36ACE2;
@@ -207,7 +214,7 @@
       font-size: 100px;
       font-weight: bold;
       line-height: 1;
-      margin-top: -3.5em;
+      margin-top: -1em;
     }
     .tiny-title {
       position: absolute;
@@ -217,7 +224,7 @@
       font-weight: 800;
       color: white;
       line-height: 1;
-      margin-top: -9.3em;
+      margin-top: -4em;
       margin-left: -6em;
     }
     .subtitle {
@@ -231,10 +238,10 @@
     }
     .description {
       width: 80%;
+      margin-left: 10%;
       text-align: center;
-      width: 100%;
       font-size: 20px;
-      font-weight: bold;
+      font-weight: 500;
     }
     img {
       display: block;
@@ -315,21 +322,22 @@
     height: 100vh;
     .block {
       display: inline-block;
-      width: 53%;
       text-align: center;
       height: 20em;
       margin-bottom: 3em;
       .title {
         text-align: left;
         font-weight: bold;
-        line-height: 1.3;
+        line-height: 1.1;
         color: white;
         font-size: 65px;
-        width: 100%;
-        margin-top: 1em;
+        width: 50vw;
       }
       .blue {
         color: #23A9E1;
+      }
+      .tiny {
+        font-size: 40px;
       }
       .description {
         color: white;
@@ -337,8 +345,7 @@
         text-align: left;
         width: 100%;
         font-size: 20px;
-        font-weight: bold;
-        margin-left: 10%;
+        font-weight: 500;
       }
       &.right {
         width: 46%;
@@ -350,7 +357,6 @@
     }
     .title {
       width: 80%;
-      margin-left: 10%;
       font-size: 28px;
       font-weight: bold;
     }
@@ -426,7 +432,6 @@
     // padding: 3em;
     background-color: black;
     height: 100vh;
-    background: linear-gradient(black, #2356e157, rgba(66, 0, 128, 0.658), black, black);
     .block {
       display: inline-block;
       width: 35%;
@@ -436,22 +441,20 @@
       .title {
         text-align: right;
         font-weight: bold;
-        line-height: 1.3;
+        line-height: 1.1;
         color: white;
         font-size: 65px;
-        width: 80%;
-        margin-top: 1em;
+        margin-right: 1em;
       }
       .blue {
         color: #23A9E1;
       }
       .description {
         color: white;
-        width: 80%;
         text-align: right;
-        // width: 100%;
+        margin-right: 3.25em;
         font-size: 20px;
-        font-weight: bold;
+        font-weight: 500;
       }
       &.right {
         width: 64%;
@@ -462,7 +465,7 @@
     img {
       display: inline-block;
       margin-top: -8em;
-      margin-left: 6em;
+      margin-left: 2em;
       width: 100%;
     }
     @media screen and (max-width: 856px) {
@@ -483,7 +486,7 @@
   .fifth-section {
     position: absolute;
     text-align: center;
-    background: linear-gradient(black, rgb(6, 3, 48), #2356e1, white);
+    background: black;
     height:fit-content;
     .blue {
       color: #23A9E1;
