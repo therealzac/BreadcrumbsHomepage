@@ -66,7 +66,7 @@ body {
       }
       position: absolute;
       right: 1em;
-      width: 33%;
+      width: 50%;
       height: max-content;
       background: black;
       z-index: 100;
@@ -120,6 +120,9 @@ body {
       height: 80vh;
       border-radius: 1em;
       border: 1px solid #eee;
+    }
+    button {
+      display: none;
     }
   }
   .text-container {
@@ -182,9 +185,19 @@ body {
       top: 100vh;
       text-align: center;
       padding: unset;
+      button {
+        display: block;
+        top: 185vw;
+      }
+      .button-container {
+        height: 10em;
+      }
     }
     .text-container {
       top: 5em;
+      button {
+        display: none;
+      }
     }
     .title {
       font-size: calc(5vw + 12px) !important;
@@ -208,6 +221,10 @@ body {
       width: 60%;
       left: 20%;
     }
+    .demo {
+      width: 90vw !important;
+      height: 180vw !important;
+    }
   }
 }
 
@@ -223,7 +240,7 @@ body {
 }
 
 .about {
-  height: 200vh;
+  height: 100vh;
   .text-container {
     width: 62%;
     left: 0;
@@ -237,6 +254,14 @@ body {
       .title, .subtitle {
         text-align: right;
       }
+    }
+  }
+  @media screen and (max-width: 856px) {
+    .text-container {
+      width: 100% !important;
+    }
+    .marketplace {
+      top: 82vh !important;
     }
   }
 }
