@@ -105,6 +105,7 @@ body {
         padding-right: 0.5em;
         font-size: 24px;
         cursor: pointer;
+        color: white;
       }
     }
   }
@@ -207,7 +208,7 @@ body {
     }
     .demo-text {
       margin-top: 3vw;
-      text-align: center !important;
+      text-align: right !important;
       &.desktop {
         display: none !important;
       }
