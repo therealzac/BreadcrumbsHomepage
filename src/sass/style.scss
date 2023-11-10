@@ -11,7 +11,7 @@ body {
   background-color: black;
 }
 
-.homepage, .about, .privacy-policy {
+.homepage, .about, .privacy-policy, .downloads {
   font-family: montserrat;
   background-color: black;
   position: absolute;
@@ -65,8 +65,8 @@ body {
         opacity: 0;
       }
       position: absolute;
-      right: 1em;
-      width: 50%;
+      right: 5%;
+      width: 90%;
       height: max-content;
       background: black;
       z-index: 100;
@@ -123,8 +123,10 @@ body {
       border-radius: 1em;
       border: 1px solid #eee;
       z-index: 99;
+      max-width: 390px;
+      max-height: 780px;
     }
-    button {
+    .button {
       display: none;
     }
   }
@@ -134,8 +136,8 @@ body {
     position: absolute;
     top: 8em;
     right: 0;
-    padding: 5vh;
     color: white;
+    padding: 1em 2em 1em 2em;
     .title {
       text-align: right;
       font-weight: bold;
@@ -143,12 +145,16 @@ body {
       color: white;
       font-size: 65px;
       width: 100%;
+      margin-top: 1em;
     }
     .subtitle {
       color: white;
       text-align: right;
       font-size: 20px;
       width: 100%;
+    }
+    .secure-vpn {
+      color: white;
     }
     .blue {
       color: #23A9E1;
@@ -160,7 +166,7 @@ body {
       display: none;
     }
   }
-  button {
+  .button {
     cursor: pointer;
     float: right;
     border-radius: 0.25em;
@@ -172,6 +178,8 @@ body {
     color: white;
     display: inline-block;
     font-weight: bold;
+    text-decoration: none;
+    text-align: center;
   }
   @media screen and (max-width: 1100px) {
     height: 75em;
@@ -179,7 +187,7 @@ body {
       width: 100%;
     }
     .demo-container {
-      top: 61vh;
+      top: 35em;
     }
   }
   @media screen and (max-width: 856px) {
@@ -188,9 +196,9 @@ body {
       top: 45em;
       text-align: center;
       padding: unset;
-      button {
+      .button {
         display: block;
-        top: 185vw;
+        top: 50em;
       }
       .button-container {
         height: 10em;
@@ -198,7 +206,7 @@ body {
     }
     .text-container {
       top: 3em;
-      button {
+      .button {
         display: none;
       }
     }
@@ -218,7 +226,7 @@ body {
         display: block !important;
       }
     }
-    button {
+    .button {
       position: absolute;
       top: 182vh;
       width: 60%;
@@ -242,32 +250,57 @@ body {
   }
 }
 
-.about {
+.about, .downloads {
   height: 100vh;
   .text-container {
     width: 62%;
     left: 0;
+    .italic {
+      font-style: italic;
+    }
     .title, .subtitle {
       text-align: left;
     }
     &.vpn {
       right: 0;
       left: unset;
-      top: 32em;
+      top: 35em;
       .title, .subtitle {
         text-align: right;
       }
     }
     &.marketplace {
-      top: 64em;
+      top: 80em;
+    }
+    a {
+      color: #23A9E1;
+      text-decoration: none;
+    }
+    &.downloads-title {
+      width: 80%;
+      right: 10%;
+      left: unset;
+      a {
+        cursor: pointer;
+        display: block;
+        margin-bottom: 1em;
+        &.coming-soon {
+          color: #aaa;
+        }
+      }
+      .title, .subtitle {
+        text-align: right;
+      }
     }
   }
   @media screen and (max-width: 1100px) {
-    .text-container {
+    .text-container:not(.downloads-title) {
       width: 100% !important;
     }
+  }
+  @media screen and (max-width: 856px) {
     .marketplace {
-      top: 67em !important;
+      top: 107em !important;
     }
   }
 }
