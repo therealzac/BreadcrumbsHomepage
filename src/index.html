@@ -24,6 +24,21 @@
         }
       }
     </script>
+    <script>
+      function highlightDemo() {
+        const demo = document.getElementsByClassName("demo")[0]
+        demo.classList.add('glow');
+        setTimeout(() => {
+          demo.classList.remove('glow');
+        }, 2000);
+      }
+    </script>
+    <script>
+      function scrollToDemo() {
+        const demo = document.getElementsByClassName("demo")[0]
+        demo.scrollIntoView()
+      }
+    </script>
   </head>
 
   <body>
@@ -53,8 +68,8 @@
           <p class="title main">Big Tech <br>makes money with<br><span class='italic'>your</span> data.<br><span class="blue">You should too.</span></p>
           <!-- <p class="subtitle"><span class='heavy'>Your personal data belongs to <span class='italic'>you</span>, not huge tech companies.</span></p> -->
           <p class="subtitle">Breadcrumbs is more than just <a class='secure-vpn' href="https://breadcrumbsdata.com/about.html#:~:text=The%20VPN%20industry%20is%20currently%20operating%20as%20a%20cartel%2C%20with%20a%20vast%20majority%20of%20the%20leading%20brands%20sharing%20the%20same%20owners.">the world's most advanced VPN.</a><br> Collect, secure, and <span class='heavy'>take control</span> of your digital footprint and <br><span class='heavy'>get paid for your data</span> for the first time.</p>
-          <p class="subtitle demo-text desktop inline">👈 Try our interactive demo.</p>
-          <p class="subtitle demo-text mobile inline">👇 Try our interactive demo.</p>
+          <p onClick="highlightDemo()" class="subtitle demo-text desktop inline">👈 Try our live demo.</p>
+          <p onClick="scrollToDemo()" class="subtitle demo-text mobile inline">👇 Try our live demo.</p>
         </div>
       </div>
     </div>
