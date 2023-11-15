@@ -190,6 +190,9 @@ body {
     .heavy {
       font-weight: 800;
     }
+    .underline {
+      text-decoration: underline;
+    }
     .mobile {
       display: none;
     }
@@ -215,12 +218,12 @@ body {
     }
     height: 100em;
     .demo-container {
-      top: 45em;
+      top: 42em;
       text-align: center;
       padding: unset;
       .button {
         top: 42em;
-        left: calc(50% - 10.5em);
+        left: calc(50% - 10em);
       }
     }
     .text-container {
