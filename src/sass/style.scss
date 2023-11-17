@@ -132,6 +132,28 @@ body {
         box-shadow: 0 0 21px 13px #23A9E1;
       }
     }
+    .button {
+      cursor: pointer;
+      border-radius: 0.25em;
+      margin-top: 1em;
+      width: 18em;
+      padding: 1em;
+      background-color: #339aef;
+      border: none;
+      color: white;
+      display: block;
+      font-weight: bold;
+      text-decoration: none;
+      text-align: center;
+      position: absolute;
+      width: 20em;
+      border-radius: 1em;
+      border: 1px solid #333;
+      z-index: 99;
+      max-width: 390px;
+      right: 5em;
+      display: none;
+    }
   }
   .text-container {
     text-align: right;
@@ -222,13 +244,17 @@ body {
       top: 42em;
       text-align: center;
       padding: unset;
+      .button {
+        display: block;
+        top: 42em;
+        left: calc(50% - 10em);
+      }
     }
     .text-container {
       top: 3em;
       padding: 1em 2em 1em 2em;
       .button {
-        top: 42em;
-        left: calc(50% - 10em);
+        display: none;
       }
     }
     .title {

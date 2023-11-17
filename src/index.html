@@ -35,8 +35,8 @@
     </script>
     <script>
       function scrollToDemo() {
-        const demo = document.getElementsByClassName("demo")[0]
-        demo.scrollIntoView();
+        const bottomButton = document.getElementsByClassName("bottom-button")[0]
+        bottomButton.scrollIntoView();
       }
     </script>
   </head>
@@ -60,8 +60,9 @@
         </div>
       </div>
         <div class='demo-container'>
-          <iframe class='demo' src='http://localhost:3000/demo'></iframe>
-          <!-- <iframe class='demo' src='https://www.breaddata.co/demo'></iframe> -->
+          <!-- <iframe class='demo' src='http://localhost:3000/demo'></iframe> -->
+          <iframe class='demo' src='https://www.breaddata.co/demo'></iframe>
+          <a class="button bottom-button" href="/downloads.html">DOWNLOAD FREE APP</a>
         </div>
         <div class='text-container'>
           <p class="title main">Big Tech makes money with <span class='italic'>your</span> personal data.<br><span class="blue">You should too.</span></p>
