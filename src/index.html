@@ -28,8 +28,6 @@
       function highlightDemo() {
         const demo = document.getElementsByClassName("demo")[0]
         demo.classList.add('glow');
-        demo.contentWindow.postMessage('refresh demo', 'http://localhost:3000/demo');
-        demo.contentWindow.postMessage('refresh demo', 'https://www.breaddata.co/demo');
         setTimeout(() => {
           demo.classList.remove('glow');
         }, 2000);
@@ -39,8 +37,6 @@
       function scrollToDemo() {
         const demo = document.getElementsByClassName("demo")[0]
         demo.scrollIntoView();
-        demo.contentWindow.postMessage('refresh demo', 'http://localhost:3000/demo');
-        demo.contentWindow.postMessage('refresh demo', 'https://www.breaddata.co/demo');
       }
     </script>
   </head>
@@ -64,9 +60,8 @@
         </div>
       </div>
         <div class='demo-container'>
-          <!-- <iframe class='demo' src='http://localhost:3000/demo'></iframe> -->
-          <iframe class='demo' src='https://www.breaddata.co/demo'></iframe>
-          <a class="button" href="/downloads.html">DOWNLOAD FREE APP</a>
+          <iframe class='demo' src='http://localhost:3000/demo'></iframe>
+          <!-- <iframe class='demo' src='https://www.breaddata.co/demo'></iframe> -->
         </div>
         <div class='text-container'>
           <p class="title main">Big Tech makes money with <span class='italic'>your</span> personal data.<br><span class="blue">You should too.</span></p>
@@ -74,6 +69,7 @@
           <p class="subtitle">Breadcrumbs is more than just <a class='secure-vpn' href="https://breadcrumbsdata.com/about.html#:~:text=the%20community%2Dgoverned-,Sentinel%20Blockchain,-to%20provide%20the">the world's most advanced VPN.</a><br> Collect, secure, and <span class='heavy'>take control</span> of your digital footprint and <br><span class='heavy'>get paid for your data</span> for the first time.</p>
           <p onClick="highlightDemo()" class="subtitle demo-text desktop inline">👈 <span class='underline'>Try our live demo.</span></p>
           <p onClick="scrollToDemo()" class="subtitle demo-text mobile inline">👇 <span class='underline'>Try our live demo.</span></p>
+          <a class="button" href="/downloads.html">DOWNLOAD FREE APP</a>
         </div>
       </div>
     </div>
