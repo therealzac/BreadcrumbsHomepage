@@ -28,8 +28,8 @@
       function highlightDemo() {
         const demo = document.getElementsByClassName("demo")[0]
         demo.classList.add('glow');
-        demo.contentWindow.postMessage('trigger_demo', 'http://localhost:3000/demo');
-        // demo.contentWindow.postMessage('trigger_demo', 'https://www.breaddata.co/demo');
+        // demo.contentWindow.postMessage('trigger_demo', 'http://localhost:3000/demo');
+        demo.contentWindow.postMessage('trigger_demo', 'https://www.breaddata.co/demo');
         setTimeout(() => {
           demo.classList.remove('glow');
         }, 2000);
@@ -62,8 +62,8 @@
         </div>
       </div>
         <div class='demo-container'>
-          <iframe class='demo' src='http://localhost:3000/demo'></iframe>
-          <!-- <iframe class='demo' src='https://www.breaddata.co/demo'></iframe> -->
+          <!-- <iframe class='demo' src='http://localhost:3000/demo'></iframe> -->
+          <iframe class='demo' src='https://www.breaddata.co/demo'></iframe>
           <a class="button bottom-button" href="/downloads.html">DOWNLOAD FREE APP</a>
         </div>
         <div class='text-container'>
