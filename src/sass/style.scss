@@ -120,8 +120,8 @@ body {
     padding-bottom: 10em;
     z-index: 99;
     .demo {
-      width: 20em;
-      height: 40em;
+      width: 21em;
+      height: 42em;
       border-radius: 1em;
       border: 1px solid #333;
       z-index: 99;
@@ -172,6 +172,9 @@ body {
       width: 100%;
       &:not(.main) {
         margin-top: 1em;
+      }
+      &.mini {
+        font-size: 40px;
       }
     }
     .button {
