@@ -12,12 +12,6 @@ html, body {
   height: 100%;
 }
 
-
-img, picture, svg, video {
-  max-width: 100%;
-  display: block;  
-}
-
 html:focus-within {
   scroll-behavior: smooth;
 }
@@ -34,7 +28,7 @@ html:focus-within {
 .header {
   position: absolute;
   top: 11vh;
-  left: 3em;
+  left: 5vh;
   // width: 60%;
 }
 
@@ -43,7 +37,7 @@ html:focus-within {
   padding: 0;
   color: #000;
   font-family: Inter;
-  font-size: 58px;
+  font-size: clamp(45px, 5vw, 60px);
   font-style: normal;
   font-weight: 500;
 }
@@ -53,18 +47,18 @@ html:focus-within {
   padding: 0;
   color: #10A0EC;
   font-family: Inter;
-  font-size: 58px;
+  font-size: clamp(45px, 5vw, 60px);
   font-style: normal;
   font-weight: 800;
 }
 
 .body .line1 {
   position: absolute;
-  top: 11em;
-  left: 2.5em;
+  top: 31vh;
+  left: 6vh;
   color: #000;
   font-family: Inter;
-  font-size: 24px;
+  font-size: clamp(26px, 2vw, 58px);
   font-style: normal;
   font-weight: 300;
   width: 40%;
@@ -72,27 +66,16 @@ html:focus-within {
 
 
 
-// .body .line2 {
-//   position: absolute;
-//   top: 13em;
-//   left: 2.5em;
-//   color: #000;
-//   font-family: Inter;
-//   font-size: 24px;
-//   font-style: normal;
-//   font-weight: 300;
-// }
-
-// .body .line3 {
-//   position: absolute;
-//   top: 15em;
-//   left: 2.5em;
-//   color: #000;
-//   font-family: Inter;
-//   font-size: 24px;
-//   font-style: normal;
-//   font-weight: 300;
-// }
+.image-background {
+  position: fixed;
+  // top: 0;
+  // left: 0;
+  width: 100%;
+  height: 100vh;
+  background: url('https://scribr-uploads.s3.us-east-2.amazonaws.com/Frame+2.png') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+}
 
 .background-container {
   position: fixed;
@@ -101,22 +84,11 @@ html:focus-within {
   width: 100%;
   height: 100%;
 }
-
-.image-background {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('https://scribr-uploads.s3.us-east-2.amazonaws.com/Frame+2.png') no-repeat center center;
-  background-size: cover;
-  z-index: -1;
-}
-
 .video-background {
   position: relative;
+  background-size: cover;
   top: 0;
-  left: 9%;
+  left: 0; //9% to match figma design but it makes a white box appear when you shrink the page
   width: 100%;
   height: 100%;
   overflow: hidden;
@@ -135,11 +107,13 @@ html:focus-within {
 
 .sentinel {
   position: absolute;
-  top: 70vh;
-  left: 25vh; 
+  top: clamp(15%, 70vh, 70%);
+  left: clamp(10vw, 15vw, 60%); 
+  display: flex;
+  align-items: center;
   width: 393px;
   height: 30px;
-  flex-shrink: 0;
+  flex-shrink: 1;
   color: #142D51;
   text-align: center;
   font-family: 'Inter';
@@ -157,28 +131,60 @@ html:focus-within {
     display: inline-block;
     vertical-align: middle;
   }
-}
-
-.playstore {
-  position: fixed;
-  top: 56vh ;
-  left: 49vh;
-}
-.playstore img {
-  width: 199px;  
-  height: 66px;  
-}
-
-.appstore{
-  position: fixed;
-  top: 56vh;
-  left: 22vh;
 
 }
+// .playstore {
+//   position: fixed;
+//   top: clamp(20%, 58vh, 70vh); 
+//   left: calc(50vw + 20vh - 25vw);
+// }
+
+// .playstore img {
+//   width: clamp(100px, 20vw, 210px); 
+//   height: clamp(50px, 10vh, 67px);  
+// }
+
+// .appstore {
+//   position: fixed;
+//   top: clamp(40vh, 58vh, 70vh);
+//   left: calc(50vw - 40vh - 5vw);
+// }
+
+// .playstore{
+//   position: fixed;
+  
+// }
+
+.button {
+  display: flex;
+  position: absolute;
+  top: 58%;
+  left: 15vw;
+  transform: translateX(-10%); /* Center the container horizontally */
+  width: 32%; /* Adjust width as needed */
+  max-width: 800px;
+  z-index: 10; /* Ensure it stays above other content */
+  justify-content: space-between; /* Distribute buttons evenly */
+  gap: 2vw; /* Consistent space between buttons using viewport width */
+}
+
+/* Individual buttons */
+.button a {
+  flex: 1 1 auto;
+  text-align: center;
+  margin: 0; /* Remove margin to rely entirely on gap for spacing */
+}
+
+.button img {
+  width: clamp(100px, 20vw, 210px); 
+  height: clamp(50px, 10vh, 67px); 
+}
+
+
 .footer {
   position: absolute;
   top: 98vh;
-  left: 50vh;
+  left: 30vw;
   display: block;
   justify-content: center;
   align-items: center;
@@ -195,7 +201,7 @@ html:focus-within {
 }
 
 .footer a {
-  color: #FFF;
+  color: #f9f7f7;
   text-decoration: none;
   margin: 0 10px;
 }
@@ -209,7 +215,7 @@ html:focus-within {
 }
 
 /* Media query for iPhone 14 Pro Max */
-@media screen and (width < 450px)
+@media screen and (width < 700px)
 {
 
   
@@ -262,22 +268,26 @@ html:focus-within {
     }
   }
 
-  .playstore {
-    top: 39%;
-    left: 57%;
-    img{
-      width: 76%;
-      height: 72%;
-    }
+  .button {
+    position: absolute;
+    top:clamp(40%, 40%, 60%);
+    left: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-width: 200px;
   }
-
-  .appstore{
-    top: 39%;
-    left: 17%;
-    img{
-      width: 70%;
-      height: auto;
-    }
+  
+  .button a {
+    flex: 1 1 auto;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .button img {
+    width: 100%;
+    max-width: 300px; 
+    height: auto; 
   }
 
   .sentinel {
@@ -289,79 +299,9 @@ html:focus-within {
 
   .footer{
     top: 98%;
-    left: 15%;
+    left: 12%;
     font-size: .3rem;
   }
 
   }
 
-
-@media screen and (min-width: 1000px) and (max-width: 1100px)
-{
-  .video-background{
-    left: 0;
-    position: absolute;
-    
-  }
-
-  .header {
-    margin: 0;
-    padding: 0;
-    top: 10%;
-    left: 2em;
-  }
-  
-  .header .line1{
-    font-size: 2rem;
-  }
-  .header .line2{
-    margin: -25px 0 0 0;
-    padding: 0;
-    font-size: 2rem;
-  }
-
-  .body{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    .line1{
-      margin: 0;
-      width: 40%;
-      top: 20%;
-      left: 10%;
-      font-size: 2rem;
-    }
-  }
-
-  .playstore {
-    top: 60%;
-    left: 30%;
-    img{
-      width: 76%;
-      height: 72%;
-    }
-  }
-
-  .appstore{
-    top: 60%;
-    left: 13%;
-    img{
-      width: 70%;
-      height: auto;
-    }
-  }
-
-  .sentinel {
-    display: flex;
-    top: 68%;
-    left: 5em;
-    align-items: center;
-  }
-
-  .footer{
-    top: 98%;
-    left: 20%;
-  }
-  }
-  
