@@ -5,6 +5,7 @@
 @import "buttons";
 @import "card";
 @import "utilities";
+@import url("https://fonts.googleapis.com/css?family=Inter:400,500,600,700,800|Montserrat:400,500,700|Roboto:100,300,400");
 
 html, body {
   margin: 0;
@@ -27,9 +28,9 @@ html:focus-within {
 
 .header {
   position: absolute;
-  top: 11vh;
-  left: 5vh;
-  // width: 60%;
+  top: 10vh;
+  left: 5vw;
+  font-size: 60px;
 }
 
 .header .line1 {
@@ -37,31 +38,34 @@ html:focus-within {
   padding: 0;
   color: #000;
   font-family: Inter;
-  font-size: clamp(45px, 5vw, 60px);
   font-style: normal;
   font-weight: 500;
+  line-height: 50px;
 }
 
 .header .line2 {
-  margin: -25px 0 0 0;
   padding: 0;
   color: #10A0EC;
   font-family: Inter;
-  font-size: clamp(45px, 5vw, 60px);
   font-style: normal;
   font-weight: 800;
 }
 
+.copy {
+  position: absolute;
+  width: 50%;
+  top: 5vh;
+}
+
 .body .line1 {
   position: absolute;
-  top: 31vh;
-  left: 6vh;
+  top: 38vh;
+  left: 5vw;
   color: #000;
   font-family: Inter;
-  font-size: clamp(26px, 2vw, 58px);
+  font-size: 16px;
   font-style: normal;
-  font-weight: 300;
-  width: 40%;
+  font-weight: 400;
 }
 
 
@@ -72,7 +76,7 @@ html:focus-within {
   // left: 0;
   width: 100%;
   height: 100vh;
-  background: url('https://scribr-uploads.s3.us-east-2.amazonaws.com/Frame+2.png') no-repeat center center;
+  background: url('https://scribr-uploads.s3.us-east-2.amazonaws.com/Frame-3+2.png') no-repeat center center;
   background-size: cover;
   z-index: -1;
 }
@@ -107,11 +111,11 @@ html:focus-within {
 
 .sentinel {
   position: absolute;
-  top: clamp(15%, 70vh, 70%);
-  left: clamp(10vw, 15vw, 60%); 
+  top: 65vh;
   display: flex;
   align-items: center;
-  width: 393px;
+  width: 33.3%;
+  left: 8.3%;
   height: 30px;
   flex-shrink: 1;
   color: #142D51;
@@ -123,50 +127,40 @@ html:focus-within {
   line-height: normal;
   letter-spacing: 1.96px;
   text-transform: uppercase;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid #6698d1;
+  padding-top: 30px;
+  margin-top: -10px;
 
   img {
     margin-left: 1vh;
-    width: 2.5em;
+    width: 2em;
     height: 3em;
     display: inline-block;
     vertical-align: middle;
   }
 
 }
-// .playstore {
-//   position: fixed;
-//   top: clamp(20%, 58vh, 70vh); 
-//   left: calc(50vw + 20vh - 25vw);
-// }
 
-// .playstore img {
-//   width: clamp(100px, 20vw, 210px); 
-//   height: clamp(50px, 10vh, 67px);  
-// }
-
-// .appstore {
-//   position: fixed;
-//   top: clamp(40vh, 58vh, 70vh);
-//   left: calc(50vw - 40vh - 5vw);
-// }
-
-// .playstore{
-//   position: fixed;
-  
-// }
-
-.button {
+.buttons {
   display: flex;
   position: absolute;
-  top: 58%;
-  left: 15vw;
-  transform: translateX(-10%); /* Center the container horizontally */
-  width: 32%; /* Adjust width as needed */
-  max-width: 800px;
-  z-index: 10; /* Ensure it stays above other content */
-  justify-content: space-between; /* Distribute buttons evenly */
-  gap: 2vw; /* Consistent space between buttons using viewport width */
+  top: 55vh;
+  width: 50%;
+  justify-content: center;
+  align-items: center;
+  // justify-content: space-between; /* Distribute buttons evenly */
+  // gap: 2vw; /* Consistent space between buttons using viewport width */
+  a {
+    display: inline-block;
+    margin-right: 1em;
+    img {
+      height:3em;
+    }
+  }
 }
+
 
 /* Individual buttons */
 .button a {
@@ -183,12 +177,12 @@ html:focus-within {
 
 .footer {
   position: absolute;
-  top: 98vh;
-  left: 30vw;
+  top: 97vh;
   display: block;
   justify-content: center;
   align-items: center;
   width: 100%;
+  text-align: center;
   height: 61px;
   color: #FFF;
   font-family: 'Inter', sans-serif;
@@ -214,13 +208,58 @@ html:focus-within {
   text-transform: lowercase;
 }
 
-/* Media query for iPhone 14 Pro Max */
-@media screen and (width < 700px)
-{
+@media screen and (width < 1278px) {
 
-  
+  .copy {
+    // top: 6vh;
+  }
+
+  .body .line1 {
+    // top: 38vh;
+  }
+}
+
+@media screen and (width < 996px) {
+  .header {
+    font-size: 42px;
+    .line1 {
+      line-height: 40px;
+    }
+  }
+  .copy {
+    // top: 5em;
+  }
+
+  .body .line1 {
+    // top: 33vh;
+    // font-size: 23px;
+    // margin-left: -5px;
+  }
+  .buttons {
+    // top: 36em;
+  }
+  .sentinel {
+    // top: 60em;
+    // font-size: 11px;
+  }
+}
+
+@media screen and (width < 700px) {
+  .copy {
+    width: 100%;
+  }
+  .buttons {
+    width: 100%;
+    top: 40vh;
+  }
+  .sentinel {
+    width: 80%;
+    left: 10%;
+    top: 50vh;
+    font-size: 10px;
+  }
   .image-background {
-    background: url('https://scribr-uploads.s3.us-east-2.amazonaws.com/iPhone_14_%26_15_Pro_-_56-2.png') no-repeat center center;
+    background: url('https://scribr-uploads.s3.us-east-2.amazonaws.com/iPhone_14_%26_15_Pro_-_56-5.png') no-repeat center center;
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -233,24 +272,27 @@ html:focus-within {
   .video-background{
     left: 0;
     position: absolute;
-    
+    background: white;
+  }
+
+  .copy {
+    top: 0;
   }
 
   .header {
     margin: 0;
     padding: 0;
-    top: 10%;
-    left: 2em;
+    left: 10%;
     font-weight: 500;
-  }
-  
-  .header .line1{
-    font-size: 2rem;
-  }
-  .header .line2{
-    margin: -10px 0 0 0;
-    padding: 0;
-    font-size: 2rem;
+    width: 90%;
+    font-size: 30px;
+    top: 15vh;
+    line-height: 30px;
+    .line1 {
+      font-weight: 500;
+    }
+    .line2 {
+    }
   }
 
   .body{
@@ -259,12 +301,12 @@ html:focus-within {
     flex-direction: column;
     align-items: center;
     .line1{
-      margin: 0;
-      top: 20%;
-      left: 10%;
-      width: 60%;
-      font-size: 1rem;
       font-weight: 400;
+      top: 26vh;
+      margin: 0;
+      left: 10%;
+      width: 80%;
+      font-size: 16px;
     }
   }
 
@@ -290,18 +332,10 @@ html:focus-within {
     height: auto; 
   }
 
-  .sentinel {
-    display: flex;
-    top: 48%;
-    left: 18%;
-    align-items: center;
-  }
-
   .footer{
     top: 98%;
     left: 12%;
     font-size: .3rem;
   }
 
-  }
-
+}
