@@ -172,10 +172,13 @@ html:focus-within {
   }
   &.downloads {
     top: 20vh;
-    width: 100%;
+    width: 80%;
     a {
       margin-right: 0.5em;
       margin-left: 0.5em;
+      img {
+        height:2.5em;
+      }
     }
   }
 }
@@ -184,7 +187,7 @@ html:focus-within {
   position: absolute;
   width: 50%;
   top: 30vh;
-  left: 33%;
+  left: 25%;
   a {
     display: block;
     text-decoration: none;
@@ -193,6 +196,15 @@ html:focus-within {
     font-weight: 400;
     letter-spacing: 1.35px;
     margin-bottom: 0.5em;
+    p {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 300;
+      color: #898888;
+    }
+    &.coming-soon {
+      color: #898888;
+    }
   }
 }
 
@@ -260,10 +272,11 @@ html:focus-within {
   }
 }
 
-@media screen and (width < 996px) {
+@media screen and (width < 1182px) {
   .header {
     font-size: 42px;
-    top: 5vh;
+    top: 0em;
+    left: 15vw;
     .line1 {
       line-height: 40px;
     }
@@ -286,13 +299,22 @@ html:focus-within {
   }
 }
 
-@media screen and (width < 700px) {
+@media screen and (width < 748px) {
   .copy {
     width: 100%;
   }
   .buttons {
     width: 100%;
     top: 40vh;
+  }
+  .download-list {
+    left: 10vw;
+    a {
+      font-size: 20px;
+      p {
+        font-size: 8px;
+      }
+    }
   }
   .sentinel {
     width: 80%;
@@ -319,23 +341,11 @@ html:focus-within {
   }
 
   .copy {
-    top: 0;
   }
 
   .header {
-    margin: 0;
-    padding: 0;
-    left: 10%;
-    font-weight: 500;
-    width: 90%;
-    font-size: 30px;
-    top: 13vh;
-    line-height: 30px;
-    .line1 {
-      font-weight: 500;
-    }
-    .line2 {
-    }
+    top: 8vh;
+    left: 5vw;
   }
 
   .body{
