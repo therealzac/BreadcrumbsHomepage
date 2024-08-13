@@ -110,6 +110,7 @@ html:focus-within {
 
 
 .sentinel {
+  // display: none !important;
   position: absolute;
   top: 65vh;
   display: flex;
@@ -154,7 +155,8 @@ html:focus-within {
   // gap: 2vw; /* Consistent space between buttons using viewport width */
   a {
     display: inline-block;
-    margin-right: 1em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
     img {
       height:3em;
     }
