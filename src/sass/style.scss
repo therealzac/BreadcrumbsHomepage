@@ -292,7 +292,7 @@ html:focus-within {
   }
 
   .body .line1 {
-    // top: 33vh;
+    // top: 25vh !important;
     // font-size: 23px;
     // margin-left: -5px;
   }
@@ -311,7 +311,7 @@ html:focus-within {
   }
   .buttons {
     width: 100%;
-    top: 45vh;
+    top: 40vh;
   }
   .download-list {
     left: 10vw;
@@ -325,7 +325,7 @@ html:focus-within {
   .sentinel {
     width: 80%;
     left: 10%;
-    top: 55vh;
+    top: 50vh;
     font-size: 10px;
   }
   .image-background:not(.downloads) {
