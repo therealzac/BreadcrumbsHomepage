@@ -83,12 +83,27 @@ html:focus-within {
   background: url('https://scribr-uploads.s3.us-east-2.amazonaws.com/Frame-3+3.png') no-repeat center center;
   background-size: cover;
   z-index: -1;
-  &.downloads {
-    left: 10%;
-    top: 11vh;
-    transform: rotate(16deg);
-    transform-origin: center;
-  }
+  // &.downloads {
+  //   left: 10%;
+  //   top: 11vh;
+  //   transform: rotate(16deg);
+  //   transform-origin: center;
+  // }
+}
+
+.image-background.downloads{
+  position: fixed;
+  // top: 0;
+  // left: 0;
+  width: 100%;
+  height: 100vh;
+  left: 10%;
+  top: 11vh;
+  background: url('https://scribr-uploads.s3.us-east-2.amazonaws.com/Frame-3+3.png') no-repeat center center;
+  background-size: cover;
+  transform: rotate(16deg) scale(1.5); /* Rotate 45 degrees and scale 1.5x */
+  transform-origin: center;
+  z-index: -1;
 }
 
 .background-container {
@@ -213,6 +228,96 @@ html:focus-within {
 }
 
 
+/* TOS Styling */
+.privacy-policy-container {
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  background-color: transparent;
+  color: #333;
+  height: 100vh; /* Set the container to the full viewport height */
+  overflow-y: auto; /* Enable scrolling for the text */
+}
+
+.tos-text-container {
+  margin: 30px;
+  font-size: 10px;
+  margin-left: 50px;
+  top: 40px;
+  position: relative;
+  overflow-y: scroll;
+}
+
+/* Title Styling */
+.tos-title {
+  font-size: 2.5em;
+  color: #2c3e50;
+  margin-top: 1em;
+  margin-bottom: 20px;
+}
+
+/* Paragraph Styling */
+.paragraph {
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Contact Link Styling */
+.tos-contact-link {
+  color: #3498db;
+  text-decoration: none;
+}
+
+.tos-contact-link:hover {
+  text-decoration: underline;
+}
+
+/* Navigation Styling */
+.topnav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0; /* Remove padding to minimize the visible space */
+  background-color: transparent; /* Make the container background transparent */
+  box-shadow: none; /* Remove the box shadow */
+  position: fixed; /* Keep navigation fixed at the top */
+  width: 100%; /* Take full width of the viewport */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Make sure the nav stays on top */
+}
+
+/* Container for Logo and Hamburger Icon */
+.logo-container {
+  height: max-content;
+  background: white;
+  display: flex;
+  align-items: center; /* Align items horizontally */
+  justify-content: space-between; /* Space between logo and hamburger icon */
+  gap: 10px; /* Space between the logo and the hamburger icon */
+  width: 100%; /* Make the container take the full width */
+  position: fixed; /* Fix the container at the top */
+  top: 0;
+  left: 0;
+  padding: 10px; /* Add some padding */
+  z-index: 1000; /* Ensure the container is on top */
+
+}
+
+/* Styling for the Logo */
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo-image {
+  width: 5em;
+  height: 5em;
+  top: 2vh;
+  left: 1vh;
+}
+
+
+
 /* Individual buttons */
 .button a {
   flex: 1 1 auto;
@@ -237,7 +342,7 @@ html:focus-within {
   height: 61px;
   color: #FFF;
   font-family: 'Inter', sans-serif;
-  font-size: 10px;
+  font-size: 8px;
   font-weight: 400;
   letter-spacing: 1.35px;
   text-transform: capitalize;
@@ -246,10 +351,11 @@ html:focus-within {
   &.downloads {
     a {
       color: #373737;
-      margin: 3em;
+      font-size: 8px;
     }
   }
 }
+
 
 .footer a {
   color: #f9f7f7;
