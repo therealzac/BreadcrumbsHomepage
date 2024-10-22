@@ -28,16 +28,25 @@
       <div class="image-background">
 
     </div>
-  
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16637937406">
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'AW-16637937406');
+    </script>
   </head>
 
   <body>
       <div class="video-background">
-          <video class="video-container" id="myVideo" autoplay loop muted>
-              <source src="https://scribr-uploads.s3.us-east-2.amazonaws.com/iStock-1097736574.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-          </video>
-        </div>
+        <video class="video-container" id="myVideo" autoplay loop muted playsinline>
+            <source src="https://scribr-uploads.s3.us-east-2.amazonaws.com/iStock-1097736574.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+      </div>
       <div class="breadcrumbslogo">
         <img src="https://scribr-uploads.s3.us-east-2.amazonaws.com/logo122222.png">
       </div>
