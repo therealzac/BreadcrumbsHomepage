@@ -25,7 +25,7 @@ html:focus-within {
   top: 2vh;
   left: 1vh;
 
-}
+  }
 
 .header {
   position: absolute;
@@ -76,32 +76,23 @@ html:focus-within {
 
 .image-background {
   position: fixed;
-  // top: 0;
-  // left: 0;
   width: 100%;
   height: 100vh;
   background: url('https://scribr-uploads.s3.us-east-2.amazonaws.com/Frame-3+3.png') no-repeat center center;
   background-size: cover;
+  background-attachment: fixed;
   z-index: -1;
-  // &.downloads {
-  //   left: 10%;
-  //   top: 11vh;
-  //   transform: rotate(16deg);
-  //   transform-origin: center;
-  // }
 }
 
 .image-background.downloads{
   position: fixed;
-  // top: 0;
-  // left: 0;
   width: 100%;
   height: 100vh;
   left: 10%;
   top: 11vh;
   background: url('https://scribr-uploads.s3.us-east-2.amazonaws.com/Frame-3+3.png') no-repeat center center;
   background-size: cover;
-  transform: rotate(16deg) scale(1.5); /* Rotate 45 degrees and scale 1.5x */
+  transform: rotate(16deg) scale(1.5);
   transform-origin: center;
   z-index: -1;
 }
@@ -271,7 +262,6 @@ html:focus-within {
   text-decoration: underline;
 }
 
-/* Navigation Styling */
 .topnav {
   display: flex;
   justify-content: space-between;
@@ -286,14 +276,13 @@ html:focus-within {
   z-index: 1000; /* Make sure the nav stays on top */
 }
 
-/* Container for Logo and Hamburger Icon */
 .logo-container {
   height: max-content;
   background: white;
   display: flex;
   align-items: center; /* Align items horizontally */
-  justify-content: space-between; /* Space between logo and hamburger icon */
-  gap: 10px; /* Space between the logo and the hamburger icon */
+  justify-content: space-between; 
+  gap: 10px; 
   width: 100%; /* Make the container take the full width */
   position: fixed; /* Fix the container at the top */
   top: 0;
@@ -303,7 +292,6 @@ html:focus-within {
 
 }
 
-/* Styling for the Logo */
 .logo-link {
   display: flex;
   align-items: center;
