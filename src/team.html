@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Team</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
+    <div class="background-container">
+        <div class="image-background">
+        </div>
+
+        <div class="logo-container">
+            <a href='/' class="logo-link">
+                <img class="breadcrumbslogo" src="https://scribr-uploads.s3.us-east-2.amazonaws.com/logo122222.png" alt="Breadcrumbs Logo" />
+            </a>
+        </div>
+
+    <style>
+        body {
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+        }
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .image-background {
+            position: fixed;
+            left: -13%;
+            top: 10%;
+            width: 100%;
+            height: 100vh;
+            background: url('https://scribr-uploads.s3.us-east-2.amazonaws.com/Frame-3+3.png') no-repeat center center;
+            background-size: cover;
+            z-index: -1;
+            transform: rotate(250deg) scale(1.5);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 300px;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        h2 a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .breadcrumbslogo {
+            position: absolute;
+            width: 5em;
+            height: 5em;
+            top: 2vh;
+            left: 1vh;
+        }
+
+        /* Main team layout */
+        .team-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: -150px;
+        }
+
+        .team-member {
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+
+        .team-member img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%; /* Make images circular */
+            display: inline-block; /* Ensures images behave like inline elements */
+        }
+
+        .team-member h2 {
+            margin: 10px 0 5px;
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: 600;
+        }
+
+        .team-member p {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 400;
+        }
+
+        /* Specific layout for Zac Wickstrom */
+        .zac-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+
+        /* Layout for the two team members */
+        .lower-team {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            margin: -70px;
+        }
+
+        @media (max-width: 768px) {
+            .lower-team {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- Zac Wickstrom at the top -->
+    <div class="team-container">
+        <div class="zac-container">
+            <div class="team-member">
+                <img src="https://scribr-uploads.s3.us-east-2.amazonaws.com/197275308_10222649535740253_3990200309936369281_n_720.jpg" alt="Zac">
+                <h2><a href="https://www.linkedin.com/in/zachary-wickstrom">Zac Wickstrom</a></h2>
+                <p>CEO</p>
+            </div>
+        </div>
+
+        <!-- Other team members underneath -->
+        <div class="lower-team">
+            <div class="team-member">
+                <img src="https://scribr-uploads.s3.us-east-2.amazonaws.com/img_4371_720.png" alt="James">
+                <h2><a href="https://yourlink.com">James Goodknight</a></h2>
+                <p>CCO</p>
+            </div>
+
+            <div class="team-member">
+                <img src="https://scribr-uploads.s3.us-east-2.amazonaws.com/img_1135_720.jpg" alt="Jarrett">
+                <h2><a href="https://www.linkedin.com/in/jarrett-undefined-517086283/">Jarrett Truett</a></h2>
+                <p>Software Engineer</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
